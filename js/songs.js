@@ -6,7 +6,7 @@ const prevBtn = document.querySelector(".prev-song");
 const nextBtn = document.querySelector(".next-song");
 
 const songList = ["1","2","3","4","5"];
-let songNum = 1;
+let songNum = 0;
 
 const songNow = song.src;
 song.setAttribute("src",`songs/${songList[songNum]}.mp3`);
