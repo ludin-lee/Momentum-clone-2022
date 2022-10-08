@@ -5,7 +5,7 @@ const song = document.querySelector("#song");
 const prevBtn = document.querySelector(".prev-song");
 const nextBtn = document.querySelector(".next-song");
 
-const songList = ["1","2","3","4"];
+const songList = ["1","2","3","4","5"];
 let songNum = 1;
 
 const songNow = song.src;
