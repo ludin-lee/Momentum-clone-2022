@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메인 화면</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--배경-->
+    <div class="wallpaper_index">
+      <video autoplay loop muted>
+      
+      </video>
+    </div>
+    <!--헤더바-->
+    <div class="header-bar">
+      <div id="header-bar__date">
+        <span id="header-bar__clock">am 00:00</span>
+      </div>
+      <div id="header-bar__greetings">
+        <span></span>
+        <button>
+          <i class="fa-solid fa-right-from-bracket"></i>
+        </button>
+      </div>
+    </div>
+    <!--로그인 섹션-->
+    <section id="login-form" >
+      <h2 id="login-form__date"></h2>
+      <h1 id="login-form__clock"></h1>
+      <form id="login-form__main">
+        <input type="text" placeholder="Name" maxlength="10" />
+        <button><i class="fa-solid fa-right-to-bracket"></i></button> 
+      </form>
+    </section>
+    <!--워크 섹션-->
+    <section class="work_form">
+      <div class="work_form__left">
+        <div class="work_form__left-weather">
+          <h1>Weather</h1>
+          <h2></h2>
+          <h3></h3>
+        </div>
+        <div class="work_form__left-quotes">
+          <i class="fa-solid fa-bookmark"></i>
+          <h1></h1>
+          <h2></h2>
+          <h3></h3>
+          <h4></h4>
+        </div>
+      </div>
+      <div class="work_form__main">
+        <div class="work_form__main_table">
+          <div>
+          <ul class="work_form__main_table_contents">
+          </ul>
+        </div>
+        </div>
+        <div class="work_form__main_subjet">
+          <form>
+          <input
+            type="text"
+            required
+            maxlength="20"
+            placeholder="할 일을 적어주세요"
+          />
+        </form>
+        </div>
+      </div>
+      <div class="work_form__right">
+        <div class="work_form__right_calender">
+          <div class="work_form__right_header">
+            <div class="work_form__right_header_year-month">2015 06</div>
+            <div class="work_form__right_header_nav">
+              <button class="nav-btn go-prev" onclick="prevMonth()">
+                &lt;
+              </button>
+              <button class="nav-btn go-today" onclick="goToday()">
+                Today
+              </button>
+              <button class="nav-btn go-next" onclick="nextMonth()">
+                &gt;
+              </button>
+            </div>
+          </div>
+          <div class="calender_main">
+            <div class="days">
+              <div class="day">일</div>
+              <div class="day">월</div>
+              <div class="day">화</div>
+              <div class="day">수</div>
+              <div class="day">목</div>
+              <div class="day">금</div>
+              <div class="day">토</div>
+            </div>
+            <div class="dates"></div>
+          </div>
+        </div>
+        <audio src="songs/1.mp3" id="song" ></audio>
+        <div class="songs">
+          <button class="prev-song"><i class="fa-solid fa-backward-step"></i></button>
+          <button class="playing-song"><i class="fa-solid fa-play"></i></button>
+          <button class="next-song"><i class="fa-solid fa-forward-step"></i></button>
+        </div>
+        </div>
+      </div>
+    </section>
+    <!--JS파일-->
+    <script
+      src="https://kit.fontawesome.com/dc0708434c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/calender.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/greetings.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script> 
+    <script src="js/songs.js"></script>
+  </body>
+</html>
